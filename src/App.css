@@ -1,42 +1,126 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #121212;
+  color: #ffffff;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  justify-content: center;
   padding: 2rem;
-  text-align: center;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.title {
+  font-size: 36px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.title::after {
+  content: '|';
+  animation: blink 1s step-start infinite;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
 }
 
-.card {
-  padding: 2em;
+.profile-container {
+  max-width: 960px;
+  padding: 2rem;
 }
 
-.read-the-docs {
-  color: #888;
+.top-section {
+  display: flex;
+  gap: 2rem;
+  margin-bottom: 2rem;
+  margin-top: 3rem;
+  align-items: flex-start;
+}
+
+.profile-img {
+  width: 160px;
+  height: 180px;
+  object-fit: cover;
+  margin-right: 1rem;
+}
+
+.intro-block {
+  background: #1e1e1e;
+  padding: 1rem;
+  padding-right: 1.3rem;
+  border-left: 4px solid #61dafb;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+  margin-left: 0;
+}
+
+.info p {
+  margin: 0.5rem 0;
+  line-height: 1.5;
+}
+
+a {
+  color: #61dafb;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+section {
+  margin-bottom: 2rem;
+}
+
+section li {
+  margin-bottom: 0.4rem;
+  list-style: none;
+  padding-left: 0;
+}
+
+h2 {
+  margin-bottom: 0.5rem;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid #333;
+  margin-bottom: 1rem;
+}
+
+.skills-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.skills-list li {
+  margin-bottom: 0.4rem;
+  text-align: left;
+  font-weight: 500;
+}
+
+.activities-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.activities-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+}
+
+.activity-title {
+  flex: 0.5;
+  font-weight: 500;
+  text-align: left;
+}
+
+.activity-date {
+  flex: 1;
+  text-align: left; 
+  color: #ccc;
+  font-size: 0.95rem;
 }
